@@ -4,6 +4,8 @@
 
 <img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/4d76e979-e968-44e1-8bc0-bdc116f6f83c" />        
 
+<img width="2553" height="1079" alt="image" src="https://github.com/user-attachments/assets/888ef3cc-64a3-455c-8bd0-b14c589cda0e" />    
+
 A continuación se presenta una **solución completa, profesional y ejecutable**, alineada con buenas prácticas académicas y técnicas, que cumple exactamente con los siguientes requisitos:
 
 - Interfaz gráfica en Java (Swing – IntelliJ IDEA)
