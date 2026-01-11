@@ -42,7 +42,38 @@ public class SumaUI extends JFrame {
 
         add(panel);
 
-      //  btnGenerar.addActionListener(e -> generarNumeros());
-      //  btnGuardar.addActionListener(e -> guardarDatos());
+        btnGenerar.addActionListener(e -> generarNumeros());
+        btnGuardar.addActionListener(e -> guardarDatos());
+    }
+    private void generarNumeros() {
+        Set<Integer> set = new HashSet<>();
+        Random rnd = new Random();
+        int suma = 0;
+
+        while (set.size() < 8) {
+            set.add(rnd.nextInt(6000) + 1);
+        }
+
+        int i = 0;
+        for (int n : set) {
+            numeros[i] = n;
+            campos[i].setText(String.valueOf(n));
+            suma += n;
+            i++;
+        }
+        txtResultado.setText(String.valueOf(suma));
+    }
+
+    private void guardarDatos() {
+        try {
+            int resultado = Integer.parseInt(txtResultado.getText());
+            new SumaDAO().guardarSuma(numeros, resultado);
+            JOptionPane.showMessageDialog(this,
+                    "Registro guardado correctamente en oracle");
+        } catch (Exception ex) {
+            JOptionPane.showMessageDialog(this,
+                    "Error:" + ex.getMessage(),
+                    "Error:", JOptionPane.ERROR_MESSAGE);
+        }
     }
 }
